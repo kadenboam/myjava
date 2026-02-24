@@ -1,4 +1,10 @@
 // Start of the program
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
 public class Main {
     // These are all pretty self explanitory and similar to other languages.
     int integer = 5;
@@ -10,6 +16,8 @@ public class Main {
     public static void main(String[] args) {
         // Sets up the main and values in the ode
         Main m = new Main();
+        ArrayList<Integer> list = new ArrayList<>();
+
         // Print the initial Values
         System.out.println(m.integer);
         System.out.println(m.string);
@@ -17,6 +25,7 @@ public class Main {
         System.out.println(m.floatingPoint);
         System.out.println(m.character);
         System.out.println("Hello World\n");
+        list.add(m.integer);
 
         // Sets up the class and calls the method in the class
         ChangingVariables myclass = new ChangingVariables();
@@ -31,6 +40,7 @@ public class Main {
             }
 
             myclass.method(m.integer);
+            list.add(myclass.classInteger);
 
             if (m.integer%2 == 0) {
                 myclass.printMethod();
@@ -38,6 +48,7 @@ public class Main {
 
             m.integer--;
         }
+        System.out.println(list);
     }
     
 }
